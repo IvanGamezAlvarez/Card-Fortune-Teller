@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Game: Guess the next card</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Koulen&family=Noto+Sans+Thai+Looped:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="Styles/style.css" />
+  </head>
+
+  <body>
+    <div class="finish-screen dp-none" id="finish-screen">
+      <h2>The game is over</h2>
+      <h3 id="score-final">your score: 0</h3>
+      <label for="name">Name:</label>
+      <input type="text" id="text-input" placeholder="Your name here" />
+      <button type="submit" id="submit">Submit</button>
+      <p>at least one character is required</p>
+    </div>
+
+    <main>
+      <nav class="scores" id="scores">
+        <h2>Attemps: 0000</h2>
+        <h2 id="score">Score:0</h2>
+      </nav>
+      <div class="table">
+        <div class="card-record"></div>
+        <div class="game-area">
+          <h1>Card Fortune Teller</h1>
+          <div class="card-area">
+            <div class="dp-none card-info" id="card-info">
+              <p class="card-number" id="card-number"></p>
+              <i id="symbol"></i>
+            </div>
+
+            <i
+              class="fa-solid fa-circle-play play-button"
+              id="play-button"
+              style="color: #ffd900"
+            ></i>
+          </div>
+          <h3>The next card will be?</h3>
+        </div>
+        <div class="button-area dp-none" id="game-buttons">
+          <button id="lower-button">Lower</button>
+          <button id="equal-button">Equal</button>
+          <button id="higher-button">Higher</button>
+        </div>
+      </div>
+      <section class="foot-options">
+        <button id="try-again">Try Again</button>
+        <h3>
+          Instructions<i
+            class="fa-solid fa-circle-arrow-down"
+            style="color: #ffffff"
+          ></i>
+          <a href=""></a>
+        </h3>
+        <p>Created by Ivan Gamez</p>
+      </section>
+    </main>
+    <section class="rules">
+      <h2>How to play</h2>
+      <p>
+        A card will be shown; you must guess whether it is greater than, less
+        than, or equal to the previous one. You lose instantly if you guess
+        wrong. If you select greater than or less than and you guess correctly,
+        you will receive 1 point. If you select equal and you guess correctly,
+        you will receive 5. Remember that cards cannot be repeated; your score
+        will be saved.
+      </p>
+    </section>
+    <section class="leaderboard">
+      <h2>Leaderboard</h2>
+      <div class="sections">
+        <div class="username-section">
+          <h3>Username</h3>
+          <div class="username-players" id="username-players"></div>
+        </div>
+        <div class="score-section">
+          <h3>Score</h3>
+          <div class="score-players" id="score-players"></div>
+        </div>
+      </div>
+      <p><span>Note:</span> This leaderbord only work of local way</p>
+    </section>
+    <script src="app.js"></script>
+    <script
+      src="https://kit.fontawesome.com/d4cf49a268.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
