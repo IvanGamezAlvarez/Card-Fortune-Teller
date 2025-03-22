@@ -2,6 +2,7 @@
 let score = 0;
 let lastCard;
 let oldCardsIndexs = [];
+// let gameStill = true;
 
 const numberOfCards = 13;
 const numberOfSymbols = 4;
@@ -12,7 +13,7 @@ const cloverSymbol = "fa-solid fa-clover symbol";
 const spadeSymbol = "fa-solid fa-trowel symbol";
 let playerName = "";
 //queries
-const hearthIcon = '<i class="fa-solid fa-heart" style="color: #ff0000;"></i>;';
+const hearthIcon = '<i class="fa-solid fa-heart" </i>;';
 const playButton = document.querySelector("#play-button");
 const gameButtons = document.querySelector("#game-buttons");
 const cardInfo = document.querySelector("#card-info");
@@ -29,6 +30,8 @@ const submmitButton = document.querySelector("#submit");
 const nameTextInput = document.querySelector("#text-input");
 const usernamePlayers = document.querySelector("#username-players");
 const scorePlayers = document.querySelector("#score-players");
+const cardRecord = document.querySelector("#card-record");
+const Card = document.querySelector("#card");
 
 //Functions
 
@@ -49,21 +52,53 @@ function MakeSymbol(symbol) {
   }
 }
 
-// function VerifyCard(newCard) {
-//     return oldCardsIndexs.includes(newCard)
-// }
+let createMiniCard = (number, symbol) => {
+  let miniCard = document.createElement("div");
+  miniCard.classList.add("mini-card");
+  let miniCardParraf = document.createElement("p");
+  miniCardParraf.textContent = number;
+  cardRecord.appendChild(miniCard);
+  miniCard.appendChild(miniCardParraf);
+  if (symbol == "1" || symbol == "2") {
+    miniCardParraf.classList.add("red-tx");
+  }
+};
 
-// function RegisterCard(card) {
-//     oldCardsIndexs.unshift(card)
-// }
+function VerifyCard(newCard) {
+  if (oldCardsIndexs.length >= 52) {
+    scoreFinalText.textContent = `your score: ${score}`;
+    finishScreen.classList.remove("dp-none");
+  } else {
+    return oldCardsIndexs.includes(newCard);
+  }
+}
+
+function RegisterCard(card) {
+  oldCardsIndexs.unshift(card);
+  console.log(oldCardsIndexs);
+}
+
+// let flipCard = () => {
+//   Card.classList.add("flip");
+//   setTimeout(() => {
+//     Card.classList.remove("flip");
+//   }, 500);
+// };
 
 function GetARandomCard() {
+  // flipCard();
   const newNumber = Math.floor(Math.random() * numberOfCards + 1);
   cardNumber.textContent = newNumber;
   const newSymbol = Math.floor(Math.random() * numberOfSymbols + 1);
   const newCard = newNumber + " " + MakeSymbol(newSymbol);
   lastCard = newCard;
-  return newCard;
+  if (VerifyCard(newCard)) {
+    return GetARandomCard();
+  } else {
+    createMiniCard(newNumber, newSymbol);
+    RegisterCard(newCard);
+    return newCard;
+  }
 }
 
 //this function valide the answer and increment the score or finish the game
@@ -76,7 +111,6 @@ function ValidateCard(state) {
   if (newState > 0 && state == "Higher") {
     score += 1;
     scoreText.textContent = `score: ${score}`;
-    console.log(score);
   } else if (newState < 0 && state == "Lower") {
     score += 1;
     scoreText.textContent = `score: ${score}`;

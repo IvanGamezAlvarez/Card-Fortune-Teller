@@ -238,9 +238,41 @@ h1 {
   width: 10rem;
   font-size: 1.5rem;
 }
+.mini-card {
+  height: 90%;
+  background-color: white;
+  min-width: 1%;
+  width: 10%;
+  border-radius: 5px;
+}
+.card-record {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  max-width: 60%;
+  margin: auto;
+}
+.mini-card p {
+  text-align: center;
+  height: 100%;
+  font-size: 3rem;
+}
+.red-tx {
+  color: rgb(182, 21, 21);
+}
+
 .dp-none {
   display: none;
 }
 .dp-block {
   display: block;
+}
+.flip {
+  animation: flip 500ms ease-in-out;
+}
+
+@keyframes flip {
+  100% {
+    transform: rotateY(180deg);
+  }
 }
