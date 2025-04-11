@@ -1,3 +1,6 @@
+html {
+  scroll-behavior: smooth;
+}
 body {
   margin: 0;
   font-family: "Koulen", sans-serif;
@@ -81,6 +84,24 @@ h1 {
 .play-button {
   font-size: 5rem;
   margin: 50% 0;
+  color: #ffd900;
+}
+.play-button:hover {
+  color: #dca900;
+  transition: ease-in-out 0.2s;
+  scale: 1.1;
+}
+.instructions-link {
+  text-decoration: none;
+  color: white;
+}
+.instructions-link i {
+  text-decoration: none;
+  color: white;
+  transition: ease-in-out 0.2s;
+}
+.instructions-link i:hover {
+  scale: 1.3;
 }
 
 .button-area {
@@ -99,6 +120,11 @@ h1 {
   text-transform: uppercase;
   font-size: 1.2rem;
   border: 0px;
+  transition: 0.2s ease-in-out;
+}
+.button-area button:hover {
+  scale: 1.1;
+  background-color: rgb(191, 163, 0);
 }
 .foot-options {
   display: flex;
@@ -121,13 +147,18 @@ h1 {
   font-size: 1.5rem;
   color: white;
 }
+.foot-options p {
+  font-size: 1.5rem;
+}
 .rules {
   background-color: rgb(25, 88, 57);
   color: white;
   padding-bottom: 4rem;
+  height: 50rem;
 }
 
 .rules h2 {
+  padding: 2rem;
   opacity: 50%;
   font-size: 4rem;
   text-align: center;
@@ -194,6 +225,14 @@ h1 {
 
   /* margin: 1rem; */
 }
+.card-backface {
+  margin: auto;
+  background-color: rgb(182, 21, 21);
+  bottom: 1px;
+  border-radius: 20px;
+  height: 100%;
+  width: 80%;
+}
 .card-info i {
   margin: 0;
   font-size: 2rem;
@@ -248,9 +287,10 @@ h1 {
 .card-record {
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: start;
   max-width: 60%;
   margin: auto;
+  gap: 0 3px;
 }
 .mini-card p {
   text-align: center;
@@ -260,19 +300,36 @@ h1 {
 .red-tx {
   color: rgb(182, 21, 21);
 }
-
+.try-again {
+  transition: ease-in-out 0.2s;
+}
+.try-again:hover {
+  scale: 1.3;
+}
 .dp-none {
   display: none;
 }
 .dp-block {
   display: block;
 }
+
 .flip {
-  animation: flip 500ms ease-in-out;
+  animation: flip 1000ms linear;
+}
+.fade-in {
+  animation: fade 500ms linear;
 }
 
 @keyframes flip {
   100% {
-    transform: rotateY(180deg);
+    transform: rotateY(360deg);
+  }
+}
+@keyframes fade {
+  0% {
+    opacity: 0%;
+  }
+  100% {
+    opacity: 100%;
   }
 }

@@ -12,7 +12,6 @@
     />
     <link rel="stylesheet" href="Styles/style.css" />
   </head>
-
   <body>
     <div class="finish-screen dp-none" id="finish-screen">
       <h2>The game is over</h2>
@@ -25,7 +24,6 @@
 
     <main>
       <nav class="scores" id="scores">
-        <h2>Attemps: 0000</h2>
         <h2 id="score">Score:0</h2>
       </nav>
       <div class="table">
@@ -38,11 +36,7 @@
               <i id="symbol"></i>
             </div>
 
-            <i
-              class="fa-solid fa-circle-play play-button"
-              id="play-button"
-              style="color: #ffd900"
-            ></i>
+            <i class="fa-solid fa-circle-play play-button" id="play-button"></i>
           </div>
           <h3>The next card will be?</h3>
         </div>
@@ -53,18 +47,20 @@
         </div>
       </div>
       <section class="foot-options">
-        <button id="try-again">Try Again</button>
+        <button class="try-again" id="try-again">Try Again</button>
         <h3>
-          Instructions<i
-            class="fa-solid fa-circle-arrow-down"
-            style="color: #ffffff"
-          ></i>
-          <a href=""></a>
+          <a href="#rules" class="instructions-link">
+            Instructions<i
+              id="instructions-button"
+              class="fa-solid fa-circle-arrow-down"
+              style="color: #ffffff"
+            ></i>
+          </a>
         </h3>
         <p>Created by Ivan Gamez</p>
       </section>
     </main>
-    <section class="rules">
+    <section class="rules" id="rules">
       <h2>How to play</h2>
       <p>
         A card will be shown; you must guess whether it is greater than, less
