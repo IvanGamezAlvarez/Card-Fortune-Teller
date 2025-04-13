@@ -142,12 +142,14 @@ h1 {
   text-align: center;
 }
 .foot-options button {
+  width: 15rem;
   border: none;
   background: none;
   font-size: 1.5rem;
   color: white;
 }
 .foot-options p {
+  width: 15rem;
   font-size: 1.5rem;
 }
 .rules {
@@ -165,9 +167,9 @@ h1 {
 }
 .rules p {
   opacity: 50%;
-  font-size: 2.5rem;
+  font-size: 2rem;
   text-align: justify;
-  margin: 0 15rem;
+  margin: 0 10rem;
 }
 .leaderboard {
   background-color: rgb(159, 118, 72);
@@ -281,7 +283,7 @@ h1 {
   height: 90%;
   background-color: white;
   min-width: 1%;
-  width: 10%;
+  width: 8%;
   border-radius: 5px;
 }
 .card-record {

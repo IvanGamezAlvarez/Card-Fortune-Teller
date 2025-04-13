@@ -7,6 +7,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
+    />
+    <link
       href="https://fonts.googleapis.com/css2?family=Koulen&family=Noto+Sans+Thai+Looped:wght@100;200;300;400;500;600;700;800;900&display=swap"
       rel="stylesheet"
     />
@@ -14,7 +19,7 @@
   </head>
   <body>
     <div class="finish-screen dp-none" id="finish-screen">
-      <h2>The game is over</h2>
+      <h2 id="lose-message">The game is over</h2>
       <h3 id="score-final">your score: 0</h3>
       <label for="name">Name:</label>
       <input type="text" id="text-input" placeholder="Your name here" />
@@ -86,6 +91,11 @@
       <p><span>Note:</span> This leaderbord only work of local way</p>
     </section>
     <script src="app.js"></script>
+
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/toastify-js"
+    ></script>
     <script
       src="https://kit.fontawesome.com/d4cf49a268.js"
       crossorigin="anonymous"

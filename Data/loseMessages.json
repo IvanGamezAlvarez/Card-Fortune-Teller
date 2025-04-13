@@ -1,0 +1,15 @@
+[
+  { "id": 1, "message": "THE GAME IS OVER" },
+  { "id": 2, "message": "MISSION FAILED" },
+  { "id": 3, "message": "DEFEAT" },
+  { "id": 4, "message": "TRY AGAIN" },
+  { "id": 5, "message": "GAME OVER!" },
+  { "id": 6, "message": "YOUR JOURNEY ENDS HERE" },
+  { "id": 7, "message": "BETTER LUCK NEXT TIME" },
+  { "id": 8, "message": "YOU WERE NOT READY" },
+  { "id": 9, "message": "WRONG MOVE" },
+  { "id": 10, "message": "ELIMINATED" },
+  { "id": 11, "message": "TERMINATED" },
+  { "id": 12, "message": "NO CONTINUES LEFT" },
+  { "id": 13, "message": "THE END... FOR NOW" }
+]
