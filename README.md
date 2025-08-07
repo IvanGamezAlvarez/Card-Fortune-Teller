@@ -1,5 +1,32 @@
-<h1 align="center">This is Card Fortune Teller</h1>
-<h3 align="center">A classic simple card game</h3>
+# 🃏 Card Fortune Teller
 
-<h3 align="left">Languages and Tools:</h3>
-<p align="left"> <a href="https://www.w3schools.com/css/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg" alt="css3" width="40" height="40"/> </a> <a href="https://www.w3.org/html/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg" alt="html5" width="40" height="40"/> </a> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="javascript" width="40" height="40"/> </a> </p>
+A fun **web-based card game** built with **HTML, CSS, and JavaScript**.  
+The objective is simple: guess whether the next card will be **higher or lower** than the current one.  
+Features smooth animations, **Toastify.js notifications**, and **localStorage score saving**.
+
+---
+
+## 🚀 Features
+
+- 🎯 **Simple gameplay** – Higher or lower card guessing.
+- 🎨 **Smooth animations** for card flips and transitions.
+- 🔔 **Toastify.js notifications** for feedback and game events.
+- 💾 **Score saving** using `localStorage` to keep your best result.
+
+---
+
+## 🛠 Tech Stack
+
+- **HTML5**
+- **CSS3** (Animations & Transitions)
+- **JavaScript (ES6+)**
+- [Toastify.js](https://apvarun.github.io/toastify-js/) *(for stylish notifications)*
+
+---
+
+## 📦 Installation & Setup
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/your-username/higher-or-lower-game.git
+   cd higher-or-lower-game
